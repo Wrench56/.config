@@ -4,7 +4,10 @@ return require('packer').startup(function(use)
   use 'shaunsingh/nord.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = function()
+        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+        ts_update()
+    end,
   }
   use {
     'nvim-lualine/lualine.nvim',
