@@ -1,0 +1,2 @@
+# Ignore packer_compiled.lua
+nvim/plugin
