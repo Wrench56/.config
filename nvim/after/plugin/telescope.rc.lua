@@ -1,6 +1,7 @@
 local status, telescope = pcall(require, 'telescope')
 if (not status) then return end
 
+vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermfg=0,  ctermbg=0 })
 
 local actions = require('telescope.actions')
 
