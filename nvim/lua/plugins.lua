@@ -43,4 +43,13 @@ require("lazy").setup({
   'windwp/nvim-autopairs',
   'folke/which-key.nvim',
   'lukas-reineke/indent-blankline.nvim'
-})
+},
+{
+  install = {
+    colorscheme = {'nord'}
+  },
+  ui = {
+    border = 'rounded'
+  }
+}
+)
