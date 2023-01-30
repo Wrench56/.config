@@ -15,7 +15,7 @@ require("lazy").setup({
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
   {
-    'nvim-tree/nvim-web-devicons',
+    'nvim-tree/nvim-tree.lua',
     dependencies = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
@@ -42,5 +42,5 @@ require("lazy").setup({
   'p00f/nvim-ts-rainbow',
   'windwp/nvim-autopairs',
   'folke/which-key.nvim',
-
+  'xiyaowong/nvim-transparent',
 })
