@@ -42,6 +42,5 @@ require("lazy").setup({
   'p00f/nvim-ts-rainbow',
   'windwp/nvim-autopairs',
   'folke/which-key.nvim',
-  'xiyaowong/nvim-transparent',
   'lukas-reineke/indent-blankline.nvim'
 })
