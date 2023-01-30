@@ -2,7 +2,6 @@ local status, nvimtree = pcall(require, 'nvim-tree')
 if (not status) then return end
 
 nvimtree.setup({
-	open_on_setup = true,
 	hijack_cursor = true,
 	view = {},
 	renderer = {
