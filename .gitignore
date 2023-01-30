@@ -3,3 +3,6 @@ nvim/plugin
 
 # Ignore scoop "version" file
 scoop/config.json
+
+# Ignore lazy-lock.json (package manager)
+nvim/lazy-lock.json
