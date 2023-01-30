@@ -1,37 +1,39 @@
 local status, dashboard = pcall(require, 'dashboard')
 if (not status) then return end
 
+version_table = vim.version()
+version = tostring(version_table['major']) .. '.' .. tostring(version_table['minor']) .. '.' .. tostring(version_table['patch'])
 
 dashboard.setup({
    config = {
       week_header = {
-      enable = true,
+         enable = true,
+         concat = ' - Neovim v' .. version
       },
+      disable_move = true,
       shortcut = {
-      {
-         desc = ' Update',
-         group = '@property',
-         action = 'PackerUpdate',
-         key = 'u' 
+         {
+            desc = ' Update',
+            group = '@property',
+            action = 'Lazy update',
+            key = 'u' 
+         },
+         {
+            desc = ' Files',
+            group = 'Label',
+            action = 'Telescope find_files',
+            key = 'f',
+         },
+         {
+            desc = ' Health',
+            group = 'DiagnosticHint',
+            action = 'checkhealth',
+            key = 'h',
+         },
       },
-      {
-         desc = ' Files',
-         group = 'Label',
-         action = 'Telescope find_files',
-         key = 'f',
-      },
-      {
-         desc = ' Apps',
-         group = 'DiagnosticHint',
-         action = 'Telescope app',
-         key = 'a',
-      },
-      {
-         desc = ' dotfiles',
-         group = 'Number',
-         action = 'Telescope dotfiles',
-         key = 'd',
-      },
-      },
+      footer = {
+         '',
+         'Welcome aboard, Captain!'
+      }
    },
 })
