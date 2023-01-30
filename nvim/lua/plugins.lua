@@ -11,7 +11,7 @@ require("lazy").setup({
   },
   {
     'akinsho/bufferline.nvim',
-    tag = "v3.*",
+    version = "v3.*",
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
   {
@@ -19,7 +19,7 @@ require("lazy").setup({
     dependencies = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    version = 'nightly' -- optional, updated every week. (see issue #1193)
   },
   {
     'glepnir/dashboard-nvim',
