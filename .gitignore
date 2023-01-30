@@ -1,2 +1,5 @@
 # Ignore packer_compiled.lua
 nvim/plugin
+
+# Ignore scoop "version" file
+scoop/config.json
