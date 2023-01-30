@@ -29,6 +29,9 @@ sudo apt-get install neovim
     # Update pynvim
     pip install pynvim --upgrade
 
+    # Install ripgrep (for telescope)
+    sudo apt-get install ripgrep
+
     # Install fd (for telescope)
     sudo apt-get install fd-find
 
