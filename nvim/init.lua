@@ -11,8 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.api.nvim_set_hl(0, "LazyNormal", { ctermfg=0,  ctermbg=0 })
-
 require('base')
 require('plugins')
 require('keybindings')
+require('style')

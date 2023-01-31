@@ -1,7 +1,10 @@
 vim.g.mapleader = " " -- make sure to set `mapleader` before lazy so your mappings are correct
 
+vim.api.nvim_set_hl(0, "LazyNormal", { ctermbg=0 })
+
 require("lazy").setup({
   'shaunsingh/nord.nvim',
+  'navarasu/onedark.nvim',
   {
     'nvim-treesitter/nvim-treesitter',
     build = function()
@@ -46,7 +49,7 @@ require("lazy").setup({
 },
 {
   install = {
-    colorscheme = {'nord'}
+    colorscheme = {'onedark'}
   },
   ui = {
     border = 'rounded'
