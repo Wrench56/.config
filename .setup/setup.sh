@@ -7,6 +7,10 @@ fi
 sudo apt-get update
 sudo apt-get --with-new-pkgs upgrade
 
+# Install software properties common
+sudo apt install software-properties-common
+sudo apt update
+
 # Install exa (better ls)
 sudo apt-get install exa
 
@@ -52,3 +56,8 @@ sudo apt-get install neovim
 
     # Install tree-sitter (with cargo)
     cargo install tree-sitter-cli
+
+    # Install lazygit
+    sudo add-apt-repository ppa:lazygit-team/daily
+    sudo apt-get update
+    sudo apt-get install lazygit
