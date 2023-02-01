@@ -54,7 +54,3 @@ smap('v', 'h', '<Delete><Esc>ih') -- TODO: Do this to all the different keys
 
 -- Telescope
 --map('n', '<leader>t', '<Cmd>Telescope<CR>', {noremap = true, silent = true})
-
--- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
