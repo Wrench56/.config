@@ -3,6 +3,10 @@ then
     echo "Use the setup script with 'sudo'!"
 fi
 
+# Update system
+sudo apt-get update
+sudo apt-get --with-new-pkgs upgrade
+
 # Install exa (better ls)
 sudo apt-get install exa
 
