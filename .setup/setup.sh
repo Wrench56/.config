@@ -1,4 +1,7 @@
-echo "Use with 'sudo'!"
+if [ "$USER" != "root" ] 
+then
+    echo "Use the setup script with 'sudo'!"
+fi
 
 # Install exa (better ls)
 sudo apt-get install exa
@@ -20,6 +23,14 @@ sudo apt-get install cargo
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash
 sudo apt-get install -y nodejs
 
+# Update (manual) python
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.11
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 100
+sudo update-alternatives --set python3 /usr/bin/python3.11
+sudo apt install python3-setuptools python3-pip
+
 # Install neovim (unstable)
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
@@ -27,7 +38,7 @@ sudo apt-get install neovim
 
 # Install all neovim/neovim plugin requirements:
     # Update pynvim
-    pip install pynvim --upgrade
+    pip3 install pynvim --upgrade
 
     # Install ripgrep (for telescope)
     sudo apt-get install ripgrep
