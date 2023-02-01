@@ -45,7 +45,11 @@ require("lazy").setup({
   'p00f/nvim-ts-rainbow',
   'windwp/nvim-autopairs',
   'folke/which-key.nvim',
-  'lukas-reineke/indent-blankline.nvim'
+  'lukas-reineke/indent-blankline.nvim',
+  {
+    'kevinhwang91/nvim-ufo',
+    dependencies = { 'kevinhwang91/promise-async' }
+  }
 },
 {
   install = {
@@ -54,5 +58,4 @@ require("lazy").setup({
   ui = {
     border = 'rounded'
   }
-}
-)
+})
