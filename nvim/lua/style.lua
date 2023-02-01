@@ -37,3 +37,7 @@ vim.api.nvim_set_hl(0, "Character", { ctermbg=0 })
 --vim.api.nvim_set_hl(0, "CursorLine", { ctermbg=0 })
 --vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=0 })
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg=0 })
+vim.api.nvim_set_hl(0, "FoldColumn", { ctermbg=0 })
+
+vim.api.nvim_set_hl(0, "LineNr", { ctermfg='White' })
+
