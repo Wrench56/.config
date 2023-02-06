@@ -1,4 +1,4 @@
-vim.g.completeopt="menu,menuone,noinsert"
+vim.g.completeopt="menu,menuone,noselect,noinsert"
 
 local has_words_before = function()
     unpack = unpack or table.unpack
@@ -99,11 +99,3 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
 end
-
-
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig').python.setup {
-    capabilities = capabilities
-}
