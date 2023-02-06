@@ -59,7 +59,8 @@ require("lazy").setup({
   'hrsh7th/cmp-buffer',
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-vsnip',
-  'hrsh7th/vim-vsnip'
+  'hrsh7th/vim-vsnip',
+  'onsails/lspkind-nvim'
 },
 {
   install = {
