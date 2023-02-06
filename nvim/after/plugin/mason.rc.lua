@@ -11,3 +11,9 @@ masonlspconf.setup{
                          'cssls', 'html', 'jsonls', 'ltex', 'marksman',
                          'pylsp', 'sqlls', 'rust_analyzer', 'taplo', 'yamlls' },
 }
+masonlspconf.setup_handlers {
+    function (server_name)
+        require("lspconfig")[server_name].setup {}
+    end,
+}
+
