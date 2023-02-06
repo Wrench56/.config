@@ -62,7 +62,8 @@ require("lazy").setup({
   'hrsh7th/vim-vsnip',
   'onsails/lspkind-nvim',
   'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim'
+  'williamboman/mason-lspconfig.nvim',
+  'lewis6991/gitsigns.nvim'
 },
 {
   install = {
