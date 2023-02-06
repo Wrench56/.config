@@ -47,10 +47,7 @@ smap('v', 'h', '<Delete><Esc>ih') -- TODO: Do this to all the different keys
 
 -- ========================================
 
---map('n', '<C-h>', '<C-w>h', {noremap = true, silent = false})
+-- Terminal
 
--- File tree
---map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>', {noremap = true, silent = true})
-
--- Telescope
---map('n', '<leader>t', '<Cmd>Telescope<CR>', {noremap = true, silent = true})
+smap('t', '<C-t>', '<Cmd>ToggleTermToggleAll<CR>')
+smap('n', '<C-t>', '<Cmd>ToggleTermToggleAll<CR>')
