@@ -20,6 +20,9 @@ sudo apt-get install neofetch
 # Install htop
 sudo apt-get install htop
 
+# Install tree
+sudo apt-get install tree
+
 # Download FUSE (https://github.com/AppImage/AppImageKit/wiki/FUSE)
 sudo add-apt-repository universe
 sudo apt install libfuse2
