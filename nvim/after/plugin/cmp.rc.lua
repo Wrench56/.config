@@ -1,4 +1,5 @@
 vim.g.completeopt="menu,menuone,noselect,noinsert"
+vim.g.vsnip_snippet_dir = '~/.config/.vsnip'
 
 local has_words_before = function()
     unpack = unpack or table.unpack
@@ -33,7 +34,7 @@ cmp.setup({
     mapping = {
 
         -- ... Your other mappings ...
-    
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Down>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
