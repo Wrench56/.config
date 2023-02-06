@@ -18,7 +18,6 @@ smap('i', '<S-Up>', '<Left><C-o>v<Up><Right>')
 smap('i', '<S-Down>', '<C-o>v<Down><Left>')
 smap('i', '<C-S-Left>', '<S-Left><C-Left>')
 smap('i', '<C-S-Right>', '<S-Right><C-Right>')
-smap('i', '<S-Up>', '<Left><C-o>v<Up><Right>')
 
 smap('v', '<S-Left>', '<Left>')
 smap('v', '<S-Right>', '<Right>')
