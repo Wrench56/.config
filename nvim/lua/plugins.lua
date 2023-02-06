@@ -11,11 +11,13 @@ require("lazy").setup({
         local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
         ts_update()
     end,
+    event = 'BufWinEnter'
   },
   {
     'akinsho/bufferline.nvim',
     version = "v3.*",
-    dependencies = 'nvim-tree/nvim-web-devicons'
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    event = 'BufWinEnter'
   },
   {
     'nvim-tree/nvim-tree.lua',
@@ -29,8 +31,6 @@ require("lazy").setup({
     event = 'VimEnter',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
-
-
   {
     'nvim-telescope/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' }
@@ -38,17 +38,25 @@ require("lazy").setup({
 
   {
     'nvim-lualine/lualine.nvim',
-    lazy = true
+    lazy = true,
+    event = 'BufWinEnter'
   },
   'norcalli/nvim-colorizer.lua',
-  'windwp/nvim-ts-autotag',
-  'p00f/nvim-ts-rainbow',
+  {
+    'windwp/nvim-ts-autotag',
+    event = 'InsertEnter'
+  },
+  {
+    'p00f/nvim-ts-rainbow',
+    event = 'BufWinEnter'
+  },
   'windwp/nvim-autopairs',
   'folke/which-key.nvim',
   'lukas-reineke/indent-blankline.nvim',
   {
     'kevinhwang91/nvim-ufo',
-    dependencies = { 'kevinhwang91/promise-async' }
+    dependencies = { 'kevinhwang91/promise-async' },
+    event = 'BufWinEnter'
   },
   {
     'akinsho/toggleterm.nvim',
@@ -59,11 +67,23 @@ require("lazy").setup({
   'hrsh7th/cmp-buffer',
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-vsnip',
-  'hrsh7th/vim-vsnip',
+  {
+    'hrsh7th/vim-vsnip',
+    event = 'BufWinEnter'
+  },
   'onsails/lspkind-nvim',
-  'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim',
-  'lewis6991/gitsigns.nvim'
+  {
+    'williamboman/mason.nvim',
+    event = 'BufWinEnter'
+  },
+  {
+    'williamboman/mason-lspconfig.nvim',
+    event = 'BufWinEnter'
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'BufWinEnter'
+  }
 },
 {
   install = {
