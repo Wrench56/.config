@@ -6,3 +6,6 @@ scoop/config.json
 
 # Ignore lazy-lock.json (package manager)
 nvim/lazy-lock.json
+
+# Ignore lazygit state.yml
+lazygit/state.yml
