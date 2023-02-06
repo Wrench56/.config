@@ -12,6 +12,13 @@ wk.setup({
 local mappings = {
     e = {':NvimTreeToggle<CR>', 'Toggle filetree'},
     t = {':Telescope find_files<CR>', 'Open Telescope'},
+    f = {':Telescope live_grep<CR>', 'Find in files'},
+    b = {
+        name = 'Open Bash',
+        f = {':ToggleTerm<CR>', 'Open Bash on Float'},
+        t = {':ToggleTerm direction=tab<CR>', 'Open Bash in Tab'},
+        s = {':ToggleTerm size=40 direction=vertical<CR>', 'Open Bash on Side'}
+    },
     d = {':Dashboard<CR>', 'Open Dashboard'}
 }
 
