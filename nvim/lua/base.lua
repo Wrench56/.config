@@ -33,3 +33,8 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 vim.o.statuscolumn = '%=%l%s%#FoldColumn#%{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? " " : " ") : "  " }%*'
+
+-- Autocommands
+
+vim.api.nvim_create_autocmd('BufRead', {command = 'setlocal signcolumn=yes'})
+vim.api.nvim_create_autocmd('BufNewFile', {command = 'setlocal signcolumn=yes'})
