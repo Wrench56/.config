@@ -9,3 +9,7 @@ This folder contains bash scripts to setup and install requirements for the tool
 ### fix_wsl.sh
 
 This is a simple script trying to fix ``WSL 1`` errors. One of the things that might brake is invalid executable format.
+
+### fix_discord_presence.sh
+
+This script tries to fix the problems with neovim discord presence (``presence.nvim``) when using neovim thru ``WSL1``. You must pass the ``Windows`` username as the first argument and then your ``WSL`` username as the second argument. You must run this script in ``sudo``. The script must run all the time if you want ``presence.nvim`` to function properly. This script was primarily written for ``WSL1``, some suggested this script also works perfectly in ``WSL2``.
