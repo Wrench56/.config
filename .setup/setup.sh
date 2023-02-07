@@ -37,6 +37,9 @@ sudo apt-get install -y nodejs
 # Install yarn
 sudo npm install --global yarn
 
+# Install golang
+sudo apt install golang-go
+
 # Update (manual) python
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
