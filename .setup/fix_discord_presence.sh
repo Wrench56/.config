@@ -1,4 +1,4 @@
-echo "Usage: ./fix_discord_presence.sh <windows_username> <discord_username>"
+echo "Usage: ./fix_discord_presence.sh <windows_username> <wsl_username>"
 
 sudo apt-get install socat
 sudo apt install golang-go
