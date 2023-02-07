@@ -34,6 +34,9 @@ sudo apt-get install cargo
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash
 sudo apt-get install -y nodejs
 
+# Install yarn
+sudo npm install --global yarn
+
 # Update (manual) python
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
@@ -69,3 +72,17 @@ sudo apt-get install neovim
     sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
     lazygit --version
     rm lazygit.tar.gz
+
+    # Install language servers
+        # HTML, cssls, JSON
+        sudo npm i -g vscode-langservers-extracted
+
+        # YAML
+        yarn global add yaml-language-server
+
+        # Python
+        sudo npm install --global pyright
+
+        # Clangd
+        sudo apt-get install clang
+        sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100

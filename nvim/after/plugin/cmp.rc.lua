@@ -97,3 +97,31 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
 end
+
+
+-- Language servers
+
+local status, lspconfig = pcall(require, 'lspconfig')
+if (not status) then return end
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+lspconfig.html.setup {
+  capabilities = capabilities
+}
+
+lspconfig.cssls.setup {
+  capabilities = capabilities
+}
+
+lspconfig.jsonls.setup {
+  capabilities = capabilities
+}
+
+lspconfig.pyright.setup {
+  capabilities = capabilities
+}
+
+lspconfig.clangd.setup {
+  capabilities = capabilities
+}

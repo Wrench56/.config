@@ -73,14 +73,6 @@ require("lazy").setup({
   },
   'onsails/lspkind-nvim',
   {
-    'williamboman/mason.nvim',
-    event = 'BufWinEnter'
-  },
-  {
-    'williamboman/mason-lspconfig.nvim',
-    event = 'BufWinEnter'
-  },
-  {
     'lewis6991/gitsigns.nvim',
     event = 'BufWinEnter'
   }
