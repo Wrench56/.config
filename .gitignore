@@ -12,3 +12,6 @@ lazygit/state.yml
 
 # Ignore yarn
 yarn/
+
+# Ignore golang enviroment configurations (for now!)
+go/
