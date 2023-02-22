@@ -63,14 +63,7 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -95,7 +88,7 @@ alias la='ls --header'
 alias l='ls -D'
 
 # Add gitl command (returns how many lines of code you have in a git repository)
-git ls-files | xargs wc -l
+alias gitl='git ls-files | xargs wc -l'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -120,3 +113,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
