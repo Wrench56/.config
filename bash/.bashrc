@@ -94,6 +94,9 @@ alias ll='ls --long --header'
 alias la='ls --header'
 alias l='ls -D'
 
+# Add gitl command (returns how many lines of code you have in a git repository)
+git ls-files | xargs wc -l
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
