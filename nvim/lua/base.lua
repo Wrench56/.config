@@ -38,3 +38,7 @@ vim.o.statuscolumn = '%=%l%s%#FoldColumn#%{foldlevel(v:lnum) > foldlevel(v:lnum 
 
 vim.api.nvim_create_autocmd('BufRead', {command = 'setlocal signcolumn=yes'})
 vim.api.nvim_create_autocmd('BufNewFile', {command = 'setlocal signcolumn=yes'})
+
+-- Turn off indentation for special buffers (like dashboard)
+
+vim.g.indent_blankline_filetype_exclude = {'dashboard'}
