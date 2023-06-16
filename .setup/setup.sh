@@ -50,6 +50,13 @@ sudo apt install python3-setuptools python3-pip
 sudo apt install python3.10-venv
 sudo apt install python3.11-venv
 
+# Install some other OS packages
+sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+  libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+  libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# Install ncurses with unicode support
+sudo apt-get install libncursesw5-dev
 
 # Install neovim (unstable)
 sudo add-apt-repository ppa:neovim-ppa/unstable
